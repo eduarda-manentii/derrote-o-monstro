@@ -40,11 +40,11 @@
     <div class="panel buttons">
       <template v-if="running">
         <button @click="attack(false)" class="btn attack"> Ataque </button>
-        <button @click="attack(true)" class="btn especial-attack" :disabled="healButtonEspecialAttackDisabled()">
+        <button @click="attack(true)" class="btn especial-attack" :disabled="buttonEspecialAttackDisabled()">
           Ataque Especial
           <div class="progress-bar" :style="{ width: attackSpecialProgress + '%' }"></div>
         </button>
-        <button @click="healAndHurt" class="btn heal" :disabled="healButtonHealDisabled()">
+        <button @click="healAndHurt" class="btn heal" :disabled="buttonHealDisabled()">
           Curar ({{ healRemaining() }})
         </button>
         <button @click="running = false" class="btn give-up"> Desistir </button>

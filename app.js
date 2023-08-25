@@ -65,13 +65,13 @@ new Vue({
     registerLog(text, cls) {
       this.logs.unshift({ text, cls })
     },
-    healButtonEspecialAttackDisabled() {
+    buttonEspecialAttackDisabled() {
       return this.attackSpecialProgress < 100;
     },
     healRemaining() {
       return this.healCount;
     },
-    healButtonHealDisabled() {
+    buttonHealDisabled() {
       return this.healCount <= 0 || this.healCount > this.maxHealCount;
     }
   },
